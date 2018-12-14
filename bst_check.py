@@ -35,6 +35,7 @@ class Node:
         self.left = None
         self.right = None
 
+#check max value of a tree
 def tree_max(node):
     if not node:
         return float("-inf")
@@ -42,6 +43,7 @@ def tree_max(node):
     maxright = tree_max(node.right)
     return max(node.key, maxleft, maxright)
 
+#check min value of a tree
 def tree_min(node):
     if not node:
         return float("inf")
@@ -49,6 +51,7 @@ def tree_min(node):
     minright = tree_min(node.right)
     return min(node.key, minleft, minright)
 
+#verify min or max value 
 def verify(node):
     if not node:
         return True
